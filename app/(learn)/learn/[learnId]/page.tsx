@@ -96,7 +96,7 @@ function LearnPage() {
           <div className="mt-4 p-4 border rounded-md bg-gray-100">
             <p className="text-sm font-semibold">Invited by a Friend?</p>
             <p className="text-sm text-gray-700">
-              Use your friend's referral link to get 15% off your enrollment!
+              Use your friend s referral link to get 15% off your enrollment!
             </p>
           </div>
         </div>
