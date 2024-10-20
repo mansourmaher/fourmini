@@ -1,8 +1,5 @@
 import FlyoutMenu from "@/app/ui-components/floutMenu";
 import Image from "next/image";
-import React from "react";
-import { BiDownArrow } from "react-icons/bi";
-import { FaDownLeftAndUpRightToCenter } from "react-icons/fa6";
 import logo from "../../images/logo2.webp";
 
 function CourseModule() {
