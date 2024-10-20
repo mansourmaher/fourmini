@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import { Header } from "./_landingPageComponents/Header";
+import { Header } from "@/app/_landingPageComponents/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,8 +15,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+    <div className="h-full flex space-y-24 ">
+      <Header />
+      <div className="w-screen ">{children}</div>
+    </div>
   );
 }
