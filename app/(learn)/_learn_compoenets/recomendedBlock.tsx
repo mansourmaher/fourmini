@@ -6,7 +6,7 @@ function RecemondedBlock() {
       <div className="space-y-4 grid lg:grid-cols-4 items-start ">
         <div className="col-span-4 space-y-4">
           <h1 className="text-2xl font-extrabold">
-            Recommended if you're interested in Personal Development
+            Recommended if you re interested in Personal Development
           </h1>
           <p className="text-sm text-slate-500 ">
             Based on one of the most popular open online courses in the world,
