@@ -61,15 +61,42 @@ function LearnPage() {
           <h1 className="text-4xl font-extrabold">
             Learn More About Our Platform
           </h1>
+
           <div className="flex gap-x-2 items-center">
             <AvatarGroup />
             <p>Instructor: {staticDtatoDisplay.avatars[0].name}</p>
           </div>
+
           <div className="flex gap-x-4 items-center">
             <Button />
             <p>
               <span className="font-bold">{staticDtatoDisplay.enrolled}</span>{" "}
               students enrolled
+            </p>
+          </div>
+
+          {/* New section for Enroll Options */}
+          <div className="mt-4 flex flex-col space-y-3">
+            <div className="p-4 border rounded-md bg-gray-100">
+              <p className="text-sm font-semibold">Promotion:</p>
+              <p className="text-sm text-gray-700">
+                Enroll in this course and share your referral link to get 15%
+                off the price. If your friend enrolls using your link, you'll
+                also receive 15% off!
+              </p>
+              <div className="mt-2">
+                <button className="px-3 py-1.5 bg-green-500 text-white text-sm rounded-md hover:bg-green-600">
+                  Copy Referral Link
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Option for using a referral link */}
+          <div className="mt-4 p-4 border rounded-md bg-gray-100">
+            <p className="text-sm font-semibold">Invited by a Friend?</p>
+            <p className="text-sm text-gray-700">
+              Use your friend's referral link to get 15% off your enrollment!
             </p>
           </div>
         </div>
