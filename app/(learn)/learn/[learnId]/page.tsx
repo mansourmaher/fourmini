@@ -81,7 +81,7 @@ function LearnPage() {
               <p className="text-sm font-semibold">Promotion:</p>
               <p className="text-sm text-gray-700">
                 Enroll in this course and share your referral link to get 15%
-                off the price. If your friend enrolls using your link, you'll
+                off the price. If your friend enrolls using your link, you ll
                 also receive 15% off!
               </p>
               <div className="mt-2">
