@@ -255,7 +255,7 @@ function ExplorePage() {
           Our personalized recommendations are carefully selected to help you
           grow in your areas of interest. We analyze your learning patterns and
           preferences to curate a unique selection of courses that align with
-          your goals. Whether you're a beginner looking to explore new topics or
+          your goals. Whether you re a beginner looking to explore new topics or
           an experienced learner advancing your expertise, our system ensures
           you get the most relevant and impactful content.
         </p>
