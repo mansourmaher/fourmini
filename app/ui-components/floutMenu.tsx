@@ -1,69 +1,23 @@
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import {
-  BookOpenIcon,
-  BriefcaseIcon,
-  GlobeAltIcon,
-  InformationCircleIcon,
-  NewspaperIcon,
-  ShieldCheckIcon,
-  UserGroupIcon,
-  UsersIcon,
-  VideoCameraIcon,
-} from "@heroicons/react/24/outline";
-
-const engagement = [
-  { name: "About", href: "#", icon: InformationCircleIcon },
-  { name: "Customers", href: "#", icon: UsersIcon },
-  { name: "Press", href: "#", icon: NewspaperIcon },
-  { name: "Careers", href: "#", icon: BriefcaseIcon },
-  { name: "Privacy", href: "#", icon: ShieldCheckIcon },
-];
-const resources = [
-  { name: "Community", href: "#", icon: UserGroupIcon },
-  { name: "Partners", href: "#", icon: GlobeAltIcon },
-  { name: "Guides", href: "#", icon: BookOpenIcon },
-  { name: "Webinars", href: "#", icon: VideoCameraIcon },
-];
-const recentPosts = [
-  {
-    id: 1,
-    title: "Boost your conversion rate",
-    href: "#",
-    date: "Mar 16, 2023",
-    datetime: "2023-03-16",
-    category: { title: "Marketing", href: "#" },
-    imageUrl:
-      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
-    description:
-      "Et et dolore officia quis nostrud esse aute cillum irure do esse. Eiusmod ad deserunt cupidatat est magna Lorem.",
-  },
-  {
-    id: 2,
-    title: "How to use search engine optimization to drive sales",
-    href: "#",
-    date: "Mar 10, 2023",
-    datetime: "2023-03-10",
-    category: { title: "Sales", href: "#" },
-    imageUrl:
-      "https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3270&q=80",
-    description:
-      "Optio cum necessitatibus dolor voluptatum provident commodi et.",
-  },
-];
+  ChevronDownIcon,
+  VideoCameraSlashIcon,
+} from "@heroicons/react/20/solid";
+import { BookOpenIcon, PaperClipIcon } from "@heroicons/react/24/outline";
+import { BiDownArrow } from "react-icons/bi";
 
 export default function FlayoutMenu() {
   return (
     <Popover className="relative isolate z-50 shadow bg-white">
       <div className="bg-white py-5">
-        <div className="mx-auto max-w-7xl  ">
-          <PopoverButton className="flex justify-between items-center p-6 w-full cursor-pointer">
+        <div className="mx-auto max-w-7xl">
+          <PopoverButton className="flex justify-between items-center p-2 w-full cursor-pointer hover:bg-blue-200">
             <div className="flex flex-col gap-2">
               <p className="text-lg font-semibold">
                 What is this course about?
               </p>
               <p className="text-sm text-slate-500">
-                Module 1 : 1 hour to complete
+                Module 1: 1 hour to complete
               </p>
             </div>
             <div className="flex gap-x-1 items-center font-semibold text-blue-500">
@@ -76,98 +30,165 @@ export default function FlayoutMenu() {
 
       <PopoverPanel
         transition
-        className=" inset-x-0 top-0 -z-10 bg-white pt-16 shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:-translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+        className="inset-x-0 top-0 -z-10 bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:-translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-600 data-[leave]:duration-350 data-[enter]:ease-out data-[leave]:ease-in"
       >
-        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-10 px-6 py-10 lg:grid-cols-2 lg:px-8">
-          <div className="grid grid-cols-2 gap-x-6 sm:gap-x-8">
-            <div>
-              <h3 className="text-sm font-medium leading-6 text-gray-500">
-                Engagement
-              </h3>
-              <div className="mt-6 flow-root">
-                <div className="-my-2">
-                  {engagement.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="flex gap-x-4 py-2 text-sm font-semibold leading-6 text-gray-900"
-                    >
-                      <item.icon
-                        aria-hidden="true"
-                        className="h-6 w-6 flex-none text-gray-400"
-                      />
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
-              </div>
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-4 px-6 lg:grid-cols-1 lg:px-8">
+          <p className="text-sm text-slate-500">
+            Dive into the world of design with our “Introduction to design”
+            module covering design principles and content creation essentials,
+            providing a solid foundation for your creative journey. You’ll
+            explore the fundamentals of design and the role of a content
+            creator, the creative process, from discovery to execution,
+            composition principles and layout techniques, the importance of
+            accessibility in design, and practical use of Adobe Express,
+            including redeeming your premium membership. By the end of this
+            module, you’ll be equipped with the knowledge and skills to create
+            impactful, accessible designs using Adobe tools. Get ready to
+            unleash your creativity and make your mark in the world of content
+            creation!
+          </p>
+          <p className="font-bold">What’s included in this module:</p>
+          <div className="grid grid-cols-2 md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="flex items-center space-x-2 flex-row">
+              <VideoCameraSlashIcon className="h-6 w-6 text-blue-500" />
+              <p className="text-sm text-slate-500">6 Video lessons</p>
             </div>
-            <div>
-              <h3 className="text-sm font-medium leading-6 text-gray-500">
-                Resources
-              </h3>
-              <div className="mt-6 flow-root">
-                <div className="-my-2">
-                  {resources.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="flex gap-x-4 py-2 text-sm font-semibold leading-6 text-gray-900"
-                    >
-                      <item.icon
-                        aria-hidden="true"
-                        className="h-6 w-6 flex-none text-gray-400"
-                      />
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
-              </div>
+            <div className="flex items-center space-x-2 flex-row">
+              <BookOpenIcon className="h-7 w-7 text-blue-500 rounded-full p-1" />
+              <p className="text-sm text-slate-500">15 Course materials</p>
+            </div>
+            <div className="flex items-center space-x-2 flex-row">
+              <PaperClipIcon className="h-7 w-7 text-blue-500 rounded-full p-1" />
+              <p className="text-sm text-slate-500">1 Assignment</p>
             </div>
           </div>
-          <div className="grid grid-cols-1 gap-10 sm:gap-8 lg:grid-cols-2">
-            <h3 className="sr-only">Recent posts</h3>
-            {recentPosts.map((post) => (
-              <article
-                key={post.id}
-                className="relative isolate flex max-w-2xl flex-col gap-x-8 gap-y-6 sm:flex-row sm:items-start lg:flex-col lg:items-stretch"
-              >
-                <div className="relative flex-none">
-                  <img
-                    alt=""
-                    src={post.imageUrl}
-                    className="aspect-[2/1] w-full rounded-lg bg-gray-100 object-cover sm:aspect-[16/9] sm:h-32 lg:h-auto"
-                  />
-                  <div className="absolute inset-0 rounded-lg ring-1 ring-inset ring-gray-900/10" />
-                </div>
-                <div>
-                  <div className="flex items-center gap-x-4">
-                    <time
-                      dateTime={post.datetime}
-                      className="text-sm leading-6 text-gray-600"
-                    >
-                      {post.date}
-                    </time>
-                    <a
-                      href={post.category.href}
-                      className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 text-xs font-medium text-gray-600 hover:bg-gray-100"
-                    >
-                      {post.category.title}
-                    </a>
+          {/* Nested PopoverButton for additional info */}
+          <Popover>
+            <PopoverButton className="font-bold text-sm text-blue-500 flex items-center gap-x-2 px-2 mt-4 mb-4">
+              <div className="border border-blue-500 text-blue-500 p-1 rounded-full">
+                <BiDownArrow />
+              </div>
+              Show info about module content
+            </PopoverButton>
+            <PopoverPanel className="bg-white p-4 mt-2  ring-1 ring-gray-900/5">
+              <p className="text-sm text-slate-500">
+                This module dives deeper into advanced design concepts, ensuring
+                a comprehensive understanding of practical techniques. Topics
+                include color theory, typography, responsive design, and
+                interactive elements for web and mobile applications.
+              </p>
+              <div className="mt-4">
+                <p className="flex items-center space-x-2 font-bold  ">
+                  <span className=" ">
+                    <VideoCameraSlashIcon className="h-6 w-6 " />
+                  </span>{" "}
+                  <p className="">6 Video lessons</p>
+                </p>
+                <div className="flex flex-col gap-2 my-2 ">
+                  <div className="flex items-center space-x-4">
+                    <p className="text-sm text-slate-500">
+                      Introcution .
+                      <span className="text-sm text-slate-500">
+                        {" "}
+                        (20 minutes) .{" "}
+                      </span>
+                      <span>
+                        <span className="text-blue-500 font-semibold cursor-pointer">
+                          Preview Model
+                        </span>
+                      </span>
+                    </p>
                   </div>
-                  <h4 className="mt-2 text-sm font-semibold leading-6 text-gray-900">
-                    <a href={post.href}>
-                      <span className="absolute inset-0" />
-                      {post.title}
-                    </a>
-                  </h4>
-                  <p className="mt-2 text-sm leading-6 text-gray-600">
-                    {post.description}
+                </div>
+                <div className="flex flex-col gap-2 my-2 ">
+                  <div className="flex items-center space-x-4">
+                    <p className="text-sm text-slate-500">
+                      Introduction to design fundamentals .
+                      <span className="text-sm text-slate-500">
+                        {" "}
+                        (20 minutes) .{" "}
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <div className="flex flex-col gap-2 my-2 ">
+                  <div className="flex items-center space-x-4">
+                    <p className="text-sm text-slate-500">
+                      Starting the creative process .
+                      <span className="text-sm text-slate-500">
+                        {" "}
+                        (20 minutes) .{" "}
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <div className="flex flex-col gap-2 my-2 ">
+                  <div className="flex items-center space-x-4">
+                    <p className="text-sm text-slate-500">
+                      Composition principles and layout techniques .
+                      <span className="text-sm text-slate-500">
+                        {" "}
+                        (20 minutes) .{" "}
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-4">
+                <p className="flex items-center space-x-2 font-bold  ">
+                  <span className=" ">
+                    <BookOpenIcon className="h-6 w-6 " />
+                  </span>{" "}
+                  <p className="">15 Course readings</p>
+                </p>
+
+                <div className="flex items-center space-x-4">
+                  <p className="text-sm text-slate-500">
+                    Introcution .
+                    <span className="text-sm text-slate-500">
+                      {" "}
+                      (20 minutes) .{" "}
+                    </span>
+                    <span>
+                      <span className="text-blue-500 font-semibold cursor-pointer">
+                        Preview Model
+                      </span>
+                    </span>
                   </p>
                 </div>
-              </article>
-            ))}
-          </div>
+
+                <div className="flex items-center space-x-4">
+                  <p className="text-sm text-slate-500">
+                    Introduction to design fundamentals .
+                    <span className="text-sm text-slate-500">
+                      {" "}
+                      (20 minutes) .{" "}
+                    </span>
+                  </p>
+                </div>
+
+                <div className="flex items-center space-x-4">
+                  <p className="text-sm text-slate-500">
+                    Starting the creative process .
+                    <span className="text-sm text-slate-500">
+                      {" "}
+                      (20 minutes) .{" "}
+                    </span>
+                  </p>
+                </div>
+
+                <div className="flex items-center space-x-4">
+                  <p className="text-sm text-slate-500">
+                    Composition principles and layout techniques .
+                    <span className="text-sm text-slate-500">
+                      {" "}
+                      (20 minutes) .{" "}
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </PopoverPanel>
+          </Popover>
         </div>
       </PopoverPanel>
     </Popover>

@@ -45,10 +45,12 @@ const staticDtatoDisplay = {
 
 function LearnPage() {
   return (
-    <div className="space-y-4">
+    <div className="space-y-8">
       {/* <div className="container mx-auto">
         <Breadcrumb />
       </div> */}
+
+      {/* Hero section */}
 
       <div className="relative">
         <Image

@@ -5,7 +5,7 @@ import logo from "../../images/logo2.webp";
 function CourseModule() {
   return (
     <section id="course-module" className="bg-white border-b-2 p-4  mx-auto ">
-      <div className="space-y-4 grid lg:grid-cols-6 items-start  ">
+      <div className="space-y-4 grid lg:grid-cols-6 items-start  gap-x-8">
         <div className="col-span-4 space-y-4">
           <h1 className="text-2xl font-extrabold">
             There are 3 modules in this course
@@ -18,7 +18,7 @@ function CourseModule() {
             these approaches can help you master new topics, change your
             thinking and improve your life
           </p>
-          <div className="container mx-auto border rounded-lg">
+          <div className="container mx-auto border rounded-lg ">
             <div className="grid grid-cols-1 gap-4">
               <FlyoutMenu />
               <FlyoutMenu />
