@@ -1,6 +1,5 @@
 "use client";
 import * as z from "zod";
-import axios from "axios";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
@@ -40,8 +39,8 @@ const CreatePage = () => {
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
       setIsLoading(true);
-      const response = await axios.post("/api/courses", values);
-      router.push(`/teacher/courses/${response.data.id}`);
+      // const response = await axios.post("/api/courses", values);
+      // router.push(`/teacher/courses/${response.data.id}`);
     } catch (error) {
       toast.error("Something went wrong");
     }
