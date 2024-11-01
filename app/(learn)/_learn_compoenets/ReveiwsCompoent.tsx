@@ -61,14 +61,14 @@ function classNames(...classes: any) {
 
 export default function CategoryCompoent() {
   return (
-    <section id="reviews" className="bg-white">
+    <section id="reviews" className="bg-white py-14">
       <div className=" max-w-2xl   sm:px-6  lg:grid lg:max-w-7xl lg:grid-cols-12 lg:gap-x-8 lg:px-8 ">
         <div className="lg:col-span-4">
           <h2 className="text-2xl font-bold tracking-tight text-gray-900">
             Learners Reviews
           </h2>
           <p className="mt-1 text-sm text-gray-600">
-            If you’ve used this product, share your thoughts with other
+            If you ve used this product, share your thoughts with other
             customers
           </p>
 

@@ -1,12 +1,11 @@
-import React from "react";
-import CourseCard from "./_explorecomponents/CourseCard";
-
-import logo from "../../images/logo2.webp";
-import Image from "next/image";
-import backgroundFaqs from "@/app/images/background-faqs.jpg";
-import AvatarGroup from "@/app/ui-components/avatarsgroup";
-import { Button } from "@/app/_landingPageComponents/Button";
-import LearnSectionheaders from "@/app/(learn)/_learn_compoenets/learnsections";
+import CourseListSection from "./_explorecomponents/courseListSection";
+import HeroSection from "./_explorecomponents/HeroSection";
+import ExploreSection from "./_explorecomponents/exploresection";
+import { Search } from "lucide-react";
+import { Input } from "@headlessui/react";
+import { Card, CardContent } from "@/components/ui/card";
+import HeroSectionPromo from "./_explorecomponents/HeroSectionPromo";
+import WhyChooseUs from "./_explorecomponents/whychooseus";
 
 const courses = [
   {
@@ -189,83 +188,75 @@ const courses = [
     existingpurchase: true,
   },
 ];
-
+const categories = [
+  { name: "Web Development", icon: "🌐" },
+  { name: "Data Science", icon: "📊" },
+  { name: "Design", icon: "🎨" },
+  { name: "Business", icon: "💼" },
+  { name: "Marketing", icon: "📣" },
+  { name: "Mobile Development", icon: "📱" },
+  { name: "AI & Machine Learning", icon: "🤖" },
+  { name: "Cloud Computing", icon: "☁️" },
+  { name: "DevOps", icon: "⚙️" },
+  { name: "Cybersecurity", icon: "🔒" },
+  { name: "Blockchain", icon: "🔗" },
+  { name: "Product Management", icon: "📦" },
+];
 function ExplorePage() {
   return (
-    <div className="space-y-8">
-      <div className="relative">
-        <Image
-          src={backgroundFaqs}
-          alt="Learn Hero"
-          loading="lazy"
-          className="object-cover h-[70vh] w-screen"
-        />
-        <div className="absolute inset-0 flex flex-col items-center text-center container mx-auto place-content-center space-y-4 md:items-center lg:items-start md:text-left">
-          <h1 className="text-4xl font-extrabold">
-            Learn More About Our Platform
-          </h1>
+    <div className="mt-14">
+      <HeroSectionPromo />
 
-          <div className="flex gap-x-2 items-center">
-            <AvatarGroup />
-            <p>Instructor: maher</p>
-          </div>
-
-          <div className="flex gap-x-4 items-center">
-            <Button />
-            <p>
-              <span className="font-bold">+28000</span> students enrolled
-            </p>
-          </div>
-
-          {/* New section for Enroll Options */}
-          <div className="mt-4 flex flex-col space-y-3">
-            <div className="p-4 border rounded-md bg-gray-100">
-              <p className="text-sm font-semibold">Promotion:</p>
-              <p className="text-sm text-gray-700">
-                Enroll in this course and share your referral link to get 15%
-                off the price. If your friend enrolls using your link, you ll
-                also receive 15% off!
-              </p>
-              <div className="mt-2">
-                <button className="px-3 py-1.5 bg-green-500 text-white text-sm rounded-md hover:bg-green-600">
-                  Copy Referral Link
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Option for using a referral link */}
-          <div className="mt-4 p-4 border rounded-md bg-gray-100">
-            <p className="text-sm font-semibold">Invited by a Friend?</p>
-            <p className="text-sm text-gray-700">
-              Use your friend s referral link to get 15% off your enrollment!
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="flex items-center justify-center -translate-y-18">
-        <LearnSectionheaders />
-      </div>
-
-      <div className="container mx-auto p-8">
-        <p className="text-2xl font-semibold">
-          Based on your preferences, we recommend tailored courses just for you.
-        </p>
-        <p className="text-sm text-gray-700 my-4">
-          Our personalized recommendations are carefully selected to help you
-          grow in your areas of interest. We analyze your learning patterns and
-          preferences to curate a unique selection of courses that align with
-          your goals. Whether you re a beginner looking to explore new topics or
-          an experienced learner advancing your expertise, our system ensures
-          you get the most relevant and impactful content.
-        </p>
-
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3  gap-6  ">
-          {courses.map((course, index) => (
-            <CourseCard key={course.id} course={course} />
+      <section className="container mx-auto py-8 px-2">
+        <h2 className="text-3xl font-bold mb-8 text-center">
+          Explore Top Categories
+        </h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 bg-gary-100 border rounded-lg p-4">
+          {categories.map((category, index) => (
+            <Card
+              key={index}
+              className="text-center hover:shadow-lg transition-shadow duration-300"
+            >
+              <CardContent className="p-6">
+                <div className="text-4xl mb-2">{category.icon}</div>
+                <h3 className="font-semibold">{category.name}</h3>
+              </CardContent>
+            </Card>
           ))}
         </div>
-      </div>
+      </section>
+
+      <CourseListSection
+        section_id="Most popular"
+        courses={courses}
+        titleofbanner="Based on your preferences, we recommend tailored courses just for you."
+        descriptionofbanner=" Our personalized recommendations are carefully selected to help you grow
+        in your areas of interest. We analyze your learning patterns and
+        preferences to curate a unique selection of courses that align with your
+        goals. Whether you re a beginner looking to explore new topics or an
+        experienced learner advancing your expertise, our system ensures you get
+        the most relevant and impactful content."
+      />
+      {/* this section contain top rated course */}
+      <CourseListSection
+        section_id="Top rated"
+        courses={courses}
+        titleofbanner="
+        Top-rated courses from our expert instructors."
+        descriptionofbanner="Our top-rated courses are designed and delivered by industry experts who"
+      />
+      {/* this section contain newest course */}
+      <CourseListSection
+        section_id="Newest"
+        courses={courses}
+        titleofbanner="Explore our newest courses and stay ahead of the curve."
+        descriptionofbanner="Stay up-to-date with the latest trends and technologies by enrolling in our
+        newest courses. Our expert instructors are constantly updating their
+        content to provide you with the most relevant and cutting-edge
+        information. Whether you re looking to expand your knowledge or learn
+        something new, our newest courses are the perfect place to start."
+      />
+      <WhyChooseUs />
     </div>
   );
 }

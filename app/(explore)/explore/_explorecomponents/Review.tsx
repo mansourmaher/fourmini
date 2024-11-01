@@ -19,21 +19,16 @@ export default function ReviewProgress({
   return (
     <>
       <HoverCard>
-        <HoverCardTrigger className="cursor-pointer w-auto " asChild>
-          <div
-            className={cn(
-              "flex  items-center",
-              isForCard ? "justify-between" : "justify-start"
-            )}
-          >
-            <div className="flex mt-4 ">
-              <div className="flex   mb-4">
+        <HoverCardTrigger className=" w-auto " asChild>
+          <div className="flex   justify-between">
+            <div className="flex  ">
+              <div className="flex   mb-4 b">
                 {[...Array(5)].map((_, index) => {
                   const currentRating = index + 1;
                   return (
                     <div
                       key={currentRating}
-                      className="flex flex-row space-x-2"
+                      className="flex flex-row space-x-2  "
                     >
                       <label>
                         <input
@@ -62,7 +57,10 @@ export default function ReviewProgress({
             </div>
 
             <div>
-              <p className="text-sm text-slate-500"> ({totalReviews} Review) </p>
+              <p className="text-sm text-slate-500">
+                {" "}
+                ({totalReviews} Review){" "}
+              </p>
             </div>
           </div>
         </HoverCardTrigger>

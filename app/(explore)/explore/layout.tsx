@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <div className="h-full flex">
       <Header />
-      <div className="w-screen    ">{children}</div>
+      <div className="w-screen">{children}</div>
     </div>
   );
 }

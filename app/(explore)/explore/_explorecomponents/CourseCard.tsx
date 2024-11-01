@@ -3,7 +3,7 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import ReviewProgress from "./Review";
 import { Badge } from "@/components/ui/badge";
-import { BookOpen, DollarSign, Eye } from "lucide-react";
+import { BookOpen, DollarSign, Eye, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface Course {
@@ -25,23 +25,23 @@ type CourseCardProps = {
 
 function CourseCard({ course }: CourseCardProps) {
   return (
-    <div className="p-4  border flex flex-col  rounded-lg">
-      <div className="relative aspect-video rounded-xl mb-2">
+    <div className="flex flex-col gap-2 p-2 border bg-white rounded-xl hover:shadow-lg transition-shadow duration-300">
+      <div className="relative w-full aspect-video rounded-xl mb-4">
         <Image
-          className="object-cover"
+          className="w-full object-cover rounded-xl"
           src={course.imageUrl}
           alt="Course Image"
           fill
+          sizes="100vw"
           priority
         />
       </div>
-      <hr className="border-t border-muted-foreground mb-1" />
+      <hr className="border-t border-muted-foreground mb-2" />
 
-      <h1 className="text-lg font-semibold">{course.title}</h1>
-      <p className="text-sm text-muted-foreground mt-1.5  line-clamp-3 h-14 ">
+      <h3 className="font-bold truncate">{course.title}</h3>
+      <p className="text-sm text-muted-foreground mt-1.5 line-clamp-3 h-14 ">
         {course.description}
       </p>
-
       <div className="px-2">
         <ReviewProgress
           courseId={course.id}
@@ -50,36 +50,50 @@ function CourseCard({ course }: CourseCardProps) {
           isForCard={true}
         />
       </div>
-      <div className="flex ">
-        <Badge variant="yellow" className="mb-1">
-          {course.category}
-        </Badge>
-      </div>
-      <div className="flex flex-row justify-between items-center md:flex-cols-3 sm:flex-cols-3 ">
-        <div className=" ">
-          <Badge variant="outline">
+      {/* <div className="flex flex-row justify-between items-center md:flex-col sm:flex-col mt-2">
+        <div className="flex flex-wrap gap-2">
+          <Badge variant="yellow" className="max-w-[100px] truncate">
+            {course.category}
+          </Badge>
+          <Badge
+            variant="outline"
+            className="max-w-[100px] truncate flex items-center"
+          >
             <BookOpen size={14} className="mr-2" />
             {course.chapterLenght} chapters
           </Badge>
+          <Badge
+            variant="primary"
+            className="max-w-[100px] truncate flex items-center"
+          >
+            <DollarSign size={14} className="mr-2" />
+            {course.price} D
+          </Badge>
         </div>
-        <Badge variant="primary">
-          <DollarSign size={14} className="mr-2" />
-          {course.price} D
-        </Badge>
-      </div>
+      </div> */}
 
-      <div className="flex justify-between items-center">
-        <div className="mt-6 ">
+      {/* <div className="flex justify-between items-center mt-4">
+        <div></div>
+        <div className="mt-2">
           <Button variant={"primary"}>
             <Link
               href={`/learn/${course.id}`}
-              className="flex items-center gap-x-3 "
+              className="flex items-center gap-x-3"
             >
               <Eye size={18} /> View Course
             </Link>
           </Button>
         </div>
-      </div>
+      </div> */}
+      <Button variant={"primary"}>
+        <Link
+          href={`/learn/${course.id}`}
+          className="flex items-center gap-x-3"
+        >
+          <Play className="w-4 h-4 mr-2" />
+          Start Learning
+        </Link>
+      </Button>
     </div>
   );
 }

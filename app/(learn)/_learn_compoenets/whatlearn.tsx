@@ -3,7 +3,7 @@ import React from "react";
 
 function WahtLearn() {
   return (
-    <section id="what-learn" className="space-y-4 bg-white border-b-2 p-4">
+    <section id="Skills" className="space-y-4 bg-white border-b-2 p-4">
       <div>
         <h1 className="text-2xl font-extrabold">What you will learn</h1>
       </div>

@@ -2,7 +2,7 @@ import React from "react";
 
 function RecemondedBlock() {
   return (
-    <section id="recemended" className="bg-white border-b-2 p-4 space-y-4">
+    <section id="recemondation" className="bg-white border-b-2 p-4 space-y-4 py-14">
       <div className="space-y-4 grid lg:grid-cols-4 items-start ">
         <div className="col-span-4 space-y-4">
           <h1 className="text-2xl font-extrabold">
@@ -53,7 +53,8 @@ function RecemondedBlock() {
               </div>
             </div>
           </div>
-        </div>{" "}  <div className="container border rounded-lg">
+        </div>{" "}
+        <div className="container border rounded-lg">
           <div className="grid grid-cols-1 gap-4">
             <div className="flex justify-between items-center p-6 ">
               <div className="flex  gap-2 flex-col ">
@@ -69,7 +70,8 @@ function RecemondedBlock() {
               </div>
             </div>
           </div>
-        </div>{" "}  <div className="container border rounded-lg">
+        </div>{" "}
+        <div className="container border rounded-lg">
           <div className="grid grid-cols-1 gap-4">
             <div className="flex justify-between items-center p-6 ">
               <div className="flex  gap-2 flex-col ">
@@ -85,7 +87,8 @@ function RecemondedBlock() {
               </div>
             </div>
           </div>
-        </div>{" "}  <div className="container border rounded-lg">
+        </div>{" "}
+        <div className="container border rounded-lg">
           <div className="grid grid-cols-1 gap-4">
             <div className="flex justify-between items-center p-6 ">
               <div className="flex  gap-2 flex-col ">

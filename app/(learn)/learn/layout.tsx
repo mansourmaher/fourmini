@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="h-full flex space-y-24 ">
+    <div className="h-full flex space-y-8 ">
       <Header />
       <div className="w-screen ">{children}</div>
     </div>

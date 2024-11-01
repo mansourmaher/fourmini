@@ -4,7 +4,10 @@ import logo from "../../images/logo2.webp";
 
 function CourseModule() {
   return (
-    <section id="course-module" className="bg-white border-b-2 p-4  mx-auto ">
+    <section
+      id="course-module"
+      className="bg-white border-b-2 p-4  mx-auto py-14 "
+    >
       <div className="space-y-4 grid lg:grid-cols-6 items-start  gap-x-8">
         <div className="col-span-4 space-y-4">
           <h1 className="text-2xl font-extrabold">
